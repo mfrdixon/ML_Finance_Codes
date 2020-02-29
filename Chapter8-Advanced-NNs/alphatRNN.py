@@ -63,7 +63,7 @@ class AlphatRNNCell(Layer):
 
     def __init__(self, units,
                  activation='tanh',
-                 recurrent_activation='tanh',
+                 recurrent_activation='sigmoid',
                  use_bias=True,
                  kernel_initializer='glorot_uniform',
                  recurrent_initializer='orthogonal',
@@ -369,7 +369,7 @@ class AlphatRNN(RNN):
     @interfaces.legacy_recurrent_support
     def __init__(self, units,
                  activation='tanh',
-                 recurrent_activation='tanh',
+                 recurrent_activation='sigmoid',
                  use_bias=True,
                  kernel_initializer='glorot_uniform',
                  recurrent_initializer='orthogonal',

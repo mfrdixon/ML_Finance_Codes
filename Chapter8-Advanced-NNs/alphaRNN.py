@@ -144,7 +144,7 @@ class AlphaRNNCell(Layer):
         output = h + K.dot(prev_output, self.recurrent_kernel)
         if self.activation is not None:
             output = self.activation(output)
-        output = K.tanh(self.alpha)* output + 1-K.tanh(self.alpha)* prev_output
+        output = K.sigmoid(self.alpha)* output + (1-K.sigmoid(self.alpha))* prev_output
         # Properly set learning phase on output tensor.
         if 0 < self.dropout + self.recurrent_dropout:
             if training is None:

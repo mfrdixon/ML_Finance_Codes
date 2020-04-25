@@ -1,29 +1,44 @@
-# alpha-RNN
-alpha-RNN
+# Machine Learning in Finance   
+## Chapter 8: Advanced Neural Networks
 
-This repository contains notebook and a subset of the data needed for producing the graphs in the paper: 
+##### This chapter contains the following notebooks demonstrating the use of advanced neural network architectures:
 
-M. F. Dixon, Industrial Forecasting with Exponentially Smoothed Recurrent Neural Networks, 2020.
+### 1D Convolutional Neural Networks
 
+ * This notebook shows the process of creating a 1D convolutional neural network with Keras
+ * An example timeseries is created and formatted for the training of the model
+ * Its ability to predict beyond the training data is demonstrated by comparing its predictions to the true values
 
-- Alpha_RNNs_regime_switching.ipynb: generates plots for Example 2 in the paper
+### 2D Convolutional Neural Networks
 
-- Alpha_RNNs_weather.ipynb: generates plots for Example 3 in the paper
+ * This notebook shows the process of creating a 2D convolutional neural network
+ * The MNIST dataset is loaded and transformed for input into the model, and split into a training and testing set
+ * The model's out-of-sample classification performance is evaluated on the test set
 
-- Alpha_RNNs_DK2_electricity.ipynb: generates plots for Example 4 in the paper
+### Autoencoders
+**files**: yield_curve.csv
 
-requires Load7.csv
+* This notebook compares linear dimensionality reduction using principal component analysis against that achieved in an autoencoder neural network
+* A review of PCA is provided
+* An autoencoding neural network is created and trained on the `yield_curves.csv` data set
+* The results of using the principal components and the  weights learned by the autoencoder to transform the dataset are compared
 
+### RNN's: Bitcoin
+**files**: *coinbase.csv, alphaRNN.py, alphatRNN.py*
+* This notebook shows an example of a recurrent neural network for time series prediction
+* To select an appropriate model architecture, the univariate time series `coinbase.csv` is analysed for stationarity and its partial auto-correlation function is estimated
+* The time series is transformed into a set of input sequences and corresponding outputs for use with the RNN, and split into training and testing sets
+* RNN, alphaRNN, alphatRNN, LSTM & GRU models are trained on the time series
+* An example of a time series cross-validation procedure is provided
+ * This is disabled by default; the cross-validation process involves training the model many times, and can take several hours to complete.
+ * Set `cross_val = True` to enable
 
-- Alpha_RNNs_Bitcoin.ipynb: generates plots for Example 5 in the paper
-requires coinbase.csv.zip (unzip first)
-
-- Alpha_RNNs_HFT.ipynb: generates plots for Example 6 in the paper
-requires HFT.csv.zip (unzip first)
-
-
-
-Note that cross-validation in each notebook is disabled by default to avoid excessive run-times. This can be enabled by seting the cross_val flag to True.
-
-All notebooks have been tested on Mac OS X (Sierra 10.12.6) with Python 3.6 and TensorFlow 1.4. 
-The notebooks have also been tested in Google Colab with firefox version 72.0.2.
+### RNN's: HFT
+**files**: *HFT.csv, alphaRNN.py, alphatRNN.py*
+ * This notebook shows an example of a recurrent neural network for time series prediction
+ * To select an appropriate model architecture, the univariate time series `HFT.csv` is analysed for stationarity and its partial auto-correlation function is estimated
+ * The time series is transformed into a set of input sequences and corresponding outputs for use with the RNN, and split into training and testing sets
+ * RNN, alphaRNN, alphatRNN, LSTM & GRU models are trained on the time series
+ * An example of a time series cross-validation procedure is provided
+  * This is disabled by default; the cross-validation process involves training the model many times, and can take several hours to complete.
+  * Set `cross_val = True` to enable

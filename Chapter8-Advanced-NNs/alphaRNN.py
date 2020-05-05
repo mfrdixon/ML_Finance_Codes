@@ -113,7 +113,7 @@ class AlphaRNNCell(Layer):
                                         initializer=self.bias_initializer,
                                         regularizer=self.bias_regularizer,
                                         constraint=self.bias_constraint)
-        self.built = True
+        super(AlphaRNNCell, self).build(input_shape)
 
     def call(self, inputs, states, training=None):
         prev_output = states[0]

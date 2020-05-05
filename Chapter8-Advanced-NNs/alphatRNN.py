@@ -161,7 +161,7 @@ class AlphatRNNCell(Layer):
             
             self.recurrent_bias_alpha = None
             self.recurrent_bias_h = None
-        self.built = True
+        super(AlphatRNNCell, self).build(input_shape)
 
     def call(self, inputs, states, training=None):
         h_tm1 = states[0]  # previous memory

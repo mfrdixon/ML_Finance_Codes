@@ -7,12 +7,12 @@
 
 # Installation instructions
 
-For Notebook 6 on Heston:
+## For Notebook 6 on Heston:
 First install GSL
 e.g. "apt install libgsl-dev" in Ubuntu
 Then install PyHeston
 "pip install git+https://github.com/junyanxu/Python-Heston-Option-Pricer.git" after installing GSL
-For Notebook 7 on Multi-GPs:
+## For Notebook 7 on Multi-GPs:
 Sudo conda install -c anaconda mkl After this, install pytorch and torchvision:
 
 sudo conda install -c pytorch pytorch==1.0.0 torchvision

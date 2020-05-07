@@ -19,6 +19,9 @@ sudo conda install -c pytorch pytorch==1.0.0 torchvision
 
 then pip3 install gpytorch
 
+# ML_in_Finance_Bayesian_Linear_Regression
+The purpose of this notebook is to illustrate Bayesian linear regression following Sections 1 and 2 in Chpt. 3. 
+
 # Example-1-GP-BS-Pricing
 The purpose of this notebook is to demonstrate the fitting of a Gaussian Process Regression model (GP) to option price data. In this notebook, European option prices are generated from the Black-Scholes model. The notebook begins by building a GP call model, then a GP put model, and finally a portfolio holding which is short a put and long two calls.
 

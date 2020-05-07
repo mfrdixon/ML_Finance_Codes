@@ -10,4 +10,4 @@
 ### ML_in_Finance-Bias-Variance-Tradeoff.ipynb
  * This notebook illustrates the "bias-variance tradeoff" or "bias-variance dilemma". Please refer to Sections 4 and 5 of Chapter 2
  * A toy dataset, split into training and validation sets, is created by adding Gaussian noise to a trigonometric function
- * Polynomial models of increasing complexity are fit to the data, demonstrating the tradeoff between in- and out-of-sample performance
+ * Polynomial models of increasing complexity are fit to the training data, demonstrating the tradeoff between in- and out-of-sample performance

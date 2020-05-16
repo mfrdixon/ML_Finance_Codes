@@ -1,54 +1,59 @@
-# Chapter 3 notebooks 
+# Chapter 3 
 
-# Tested with
-
-# Python 3.6
+## Tested with Python 3.6
 
 
-# Installation instructions
+## Installation instructions
 
-## For Notebook 6 on Heston:
+### For Notebook 6 on Heston:
 First install GSL
 e.g. "apt install libgsl-dev" in Ubuntu
 Then install PyHeston
 "pip install git+https://github.com/junyanxu/Python-Heston-Option-Pricer.git" after installing GSL
-## For Notebook 7 on Multi-GPs:
+### For Notebook 7 on Multi-GPs:
 Sudo conda install -c anaconda mkl After this, install pytorch and torchvision:
 
 sudo conda install -c pytorch pytorch==1.0.0 torchvision
 
 then pip3 install gpytorch
 
-# ML_in_Finance_Bayesian_Linear_Regression
-The purpose of this notebook is to illustrate Bayesian linear regression following Sections 1 and 2 in Chpt. 3. 
 
-# Example-1-GP-BS-Pricing
+## Core Notebooks
+
+### ML_in_Finance_Bayesian_Linear_Regression
+The purpose of this notebook is to illustrate Bayesian linear regression, as described in Sections 1 & 2 in Chapter 3.
+It provides visualisations of Bayesian inference on the parameter distributions and of the resulting model and uncertainties in the input space. 
+
+### Example-1-GP-BS-Pricing
 The purpose of this notebook is to demonstrate the fitting of a Gaussian Process Regression model (GP) to option price data. In this notebook, European option prices are generated from the Black-Scholes model. The notebook begins by building a GP call model, then a GP put model, and finally a portfolio holding which is short a put and long two calls.
+Note that the training sample size is set to 5 in order to illustrate the uncertainty bands. See Section 5.0 for a description of using GP for pricing derivatives. 
 
-Note that the training sample size is set to 5 in order to illustrate the uncertainty bands. Seting the training sample size to a larger value, e.g. 50, will yield a much more accurate model. See Section 5.0 for a description of using GP for pricing derivatives. 
+### Example-2-GP-BS-Pricing
+The purpose of this notebook is to demonstrate the derivation of the Greeks in a Gaussian Process Regression model (GP), fitted to option price data.
+European option prices are generated from the Black-Scholes model.  The notebook begins by building a GP call model, where the input is the underlying price. The delta is then derived and compared with the Black-Scholes (BS) delta.
+The exercise is then repeated using the volatility as the input instead of the underlying price. The vega of the GP is then derived and compared with the BS vega. See Section 5.1 for further details.
 
-# Example-2-GP-BS-Pricing
-The purpose of this notebook is to demonstrate the derivation of the greeks in a Gaussian Process Regression model (GP), fitted to option price data. 
+### Example-6-GP-Heston
+This notebook demonstrates the fitting of a Gaussian Process Regression model (GP) to option price data. In this notebook, European option prices are generated from the Heston stochastic volatility model.
+It begins with the building of a GP Heston model, using the underyling and volatility as a two-dimensional input over a maturity time grid. The strike and other model parameters are assumed fixed. See Section 5.0 for further details.
 
-In this notebook, European option prices are generated from the Black-Scholes model.  The notebook begins by building a GP call model, where the input is the underlying price. The delta is then derived and compared with the Black-Scholes (BS)
-delta. The exercise is repeated, but using the volatility as the input instead of the underlying price. The vega of the GP is then derived and compared with the BS vega. See Section 5.1 for further details.
-
-# Example-6-GP-Heston
-The purpose of this notebook is to demonstrate the fitting of a Gaussian Process Regression model (GP) to option price data. In this notebook, European option prices are generated from the Heston stochastic volatility model.  The notebook begins by building a GP Heston model using the underyling and volatility as a two-dimensional input over a maturity time grid. The strike and other model parameters are assumed fixed. See Section 5.0 for further details.
-
-# Example-7-MGP-BS-Pricing
-The purpose of this notebook is to demonstrate the fitting of a multi-response Gaussian Process Regression model (GP) to the prices of two options. In this notebook, the prices of a call and put are generated from the Black-Scholes model.  The notebook begins by building a multi-GP model, and then evaluates the error.
-
+### Example-7-MGP-BS-Pricing
+The fitting of a multi-response Gaussian Process Regression model (GP) to the prices of two options. In this notebook, the prices of a call and put are generated from the Black-Scholes model.  The notebook begins by building a multi-GP model, and then evaluates the error.
 Finally the notebook studies the posterior covariance term which is uniquely available in the multi-GP model. See Section 6 for further details. Note that the notebook depends on gpytorch. See above for installation instructions.
 
-# Extras:
+## Extras
 
+### Example-3-MC-GPA-BS-CVA
+The purpose of this notebook is to demonstrate the use of a Gaussian Process Regression model (GP) in CVA modeling of a derivative portfolio.
+In this notebook, European option prices are generated from the Black-Scholes model. The notebook illustrate the CVA estimation for a portfolio which is short a put and long two calls.
+The GP model is combined with an Euler time-stepper to generate a GP MtM cube. The expected positive exposure of the portfolio is compared using exact derivative prices and GP derivative prices.
 
-# Example-3-MC-GPA-BS-CVA
-The purpose of this notebook is to demonstrate the use of a Gaussian Process Regression model (GP) in CVA modeling of a derivative portfolio. In this notebook, European option prices are generated from the Black-Scholes model. The notebook illustrate the CVA estimation for a portfolio which is short a put and long two calls. The GP model is combined with an Euler time-stepper to generate a GP MtM cube. The expected positive exposure of the portfolio is compared using exact derivative prices and GP derivative prices. 
+### Example-4-MC-GPA-BS-CVA-VaR
+The purpose of this notebook is to demonstrate the use of a Gaussian Process Regression model (GP) in CVA Value-at-Risk modeling of a derivative portfolio.
+European option prices are generated from the Black-Scholes model. The notebook illustrates the CVA estimation for a portfolio which is short a put and long two calls.
+The GP model is combined with an Euler time-stepper to generate a GP MtM cube. The distribution of the one year CVA (with uncertainty quantification) is estimated based on priors for the default model parameters. 
+Finally the difference of the one year CVA distribution and the CVA_0 is computed and the quantiles provided the 1 year CVA VaR estimates.
 
-# Example-4-MC-GPA-BS-CVA-VaR
-The purpose of this notebook is to demonstrate the use of a Gaussian Process Regression model (GP) in CVA Value-at-Risk modeling of a derivative portfolio. In this notebook, European option prices are generated from the Black-Scholes model. The notebook illustrate the CVA estimation for a portfolio which is short a put and long two calls. The GP model is combined with an Euler time-stepper to generate a GP MtM cube. The distribution of the one year CVA (with uncertainty quantification) is estimated based on priors for the default model parameters. Finally the difference of the one year CVA distribution and the CVA_0 is computed and the quantiles provided the 1 year CVA VaR estimates.
-
-# Example-5-MC-GPA-IRS-CVA
-This example demonstrates the application of GPs to CVA modeling on a counterparty portfolio of IRS contracts with 11 currencies and 10 FX processes. The notebook simulates the GP MtM cube of the portfolio, compare the Expected Positive Exposure when using a GP derivative pricing model versus a BS pricing model and calculate the CVA_0.
+### Example-5-MC-GPA-IRS-CVA
+This example demonstrates the application of GPs to CVA modeling on a counterparty portfolio of IRS contracts with 11 currencies and 10 FX processes.
+The notebook simulates the GP MtM cube of the portfolio, compare the Expected Positive Exposure when using a GP derivative pricing model versus a BS pricing model and calculate the CVA_0.

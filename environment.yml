@@ -1,0 +1,36 @@
+name: MLFenv
+channels:
+  - pytorch
+  - plotly
+  - defaults
+dependencies:
+  - arviz=0.6.*
+  - chart-studio=1.1.*
+  - imageio=2.8.*
+  - ipykernel=5.1.*
+  - ipython=7.13.*
+  - ipython_genutils=0.2.*
+  - ipywidgets=7.5.*
+  - keras=2.3.*
+  - matplotlib-base=3.1.*
+  - mkl=2020.1
+  - nbformat=5.0.*
+  - notebook=6.0.*
+  - numpy=1.18.*
+  - pandas=1.0.*
+  - pip
+  - plotly=4.6.*
+  - python=3.6.*
+  - pytorch=1.5.*
+  - scikit-learn=0.22.*
+  - scipy=1.4.*
+  - seaborn=0.10.*
+  - statsmodels=0.10.*
+  - tensorflow=2.0.*
+  - tqdm=4.46
+  - pip:
+    - cloudpickle==1.1.1
+    - gast==0.2.2
+    - gpytorch==1.1.1
+    - tensorflow-probability==0.8.0
+    - git+https://github.com/junyanxu/Python-Heston-Option-Pricer.git

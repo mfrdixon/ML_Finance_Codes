@@ -1,13 +1,17 @@
 name: MLFenv
 channels:
   - conda-forge
+  - gpytorch
   - plotly
   - pytorch
   - defaults
 dependencies:
   - arviz=0.6.*
   - chart-studio=1.1.*
+  - gast=0.2.*
+  - git=2.*
   - gsl=2.6
+  - gpytorch=1.1.*
   - imageio=2.8.*
   - ipykernel=5.1.*
   - ipython=7.13.*
@@ -33,8 +37,5 @@ dependencies:
   - theano=1.0.*
   - tqdm=4.46
   - pip:
-    - cloudpickle==1.1.1
-    - gast==0.2.2
-    - gpytorch==1.1.1
     - tensorflow-probability==0.8.0
     - git+https://github.com/junyanxu/Python-Heston-Option-Pricer.git

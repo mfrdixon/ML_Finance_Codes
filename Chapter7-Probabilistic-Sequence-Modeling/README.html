@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../resources/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="machine-learning-in-finance-from-theory-to-practice">Machine Learning in Finance: From Theory to Practice</h1>
+<h2 id="chapter-7-probabilistic-sequence-modeling">Chapter 7: Probabilistic Sequence Modeling</h2>
+<p>For instructions on how to set up the Python environment and run the notebooks please refer to <a href="../SETUP.html">SETUP.html</a> in the <em>ML_Finance_Codes</em> directory.</p>
+<p>This chapter contains the following notebooks:</p>
+<h3 id="ml_in_finance-kalman_filters.ipynb">ML_in_Finance-Kalman_Filters.ipynb</h3>
+<ul>
+<li>The purpose of this notebook is to demonstrate the application of particle filtering to stochastic volatility modeling.</li>
+<li>The insight gained from Chapter 2, namely an iterative application of Bayes’s theorem, referred to as “sequential Bayesian updates”, is the foundation of real-time Bayesian filtering. Kalman filtering is well known example of Bayesian filtering.</li>
+</ul>
+<h3 id="ml_in_finance-viterbi.ipynb">ML_in_Finance-Viterbi.ipynb</h3>
+<ul>
+<li>This notebook provides a simple example of the Viterbi algorithm applied to an coin which is either fair or loaded (hidden states).</li>
+<li>Based on a sequence of observations, the algorithm will determine the most likely sequence of hidden states, i.e. whether the coin that generated the data was likely fair or loaded.</li>
+<li>The example easily maps onto financial markets: Bull or Bear, Normal or Dislocated, etc.</li>
+</ul>
+<p><br />
+</p>
+<p><br />
+</p>
+</body>
+</html>

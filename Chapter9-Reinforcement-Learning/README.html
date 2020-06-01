@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../resources/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="machine-learning-in-finance-from-theory-to-practice">Machine Learning in Finance: From Theory to Practice</h1>
+<h2 id="chapter-9-reinforcement-learning">Chapter 9: Reinforcement Learning</h2>
+<p>For instructions on how to set up the Python environment and run the notebooks please refer to <a href="../SETUP.html">SETUP.html</a> in the <em>ML_Finance_Codes</em> directory.</p>
+<p>This chapter contains the following notebooks:</p>
+<h3 id="ml_in_finance_fcw.ipynb">ML_in_Finance_FCW.ipynb</h3>
+<ul>
+<li>This notebook shows the application of reinforcement learning to the financial cliff walking problem. The problem is described in Example 9.4 in the textbook.</li>
+<li>A discretised, time-dependent action value function is</li>
+<li>The convergence of the algorithms is compared by plotting the average reward gained against number of training episodes</li>
+<li>The actions learned for each state by the two algorithms are inspected</li>
+</ul>
+<h3 id="ml_in_finance_market_impact.ipynb">ML_in_Finance_Market_Impact.ipynb</h3>
+<ul>
+<li>This notebook shows the application of SARSA and Q-learning to the optimal stock execution problem described in Example 9.5 in the textbook.</li>
+<li>The convergence of the algorithms is compared by plotting the average reward gained against number of training episodes</li>
+</ul>
+<h3 id="ml_in_finance_marketmaking.ipynb">ML_in_Finance_MarketMaking.ipynb</h3>
+<ul>
+<li>This notebook shows the application of reinforcement learning to the problem of high-frequency market making. The problem is described in Example 9.6 in the textbook.</li>
+<li>SARSA and Q-learning are applied to learn time-independent optimal policies based on historical limit order book data.</li>
+<li>The convergence of the algorithms is compared by plotting the reward gained after each training episode</li>
+<li>An animation demonstrating the behaviour of the learned policies is shown</li>
+</ul>
+<h3 id="ml_in_finance_lspi_markowitz.ipynb">ML_in_Finance_LSPI_Markowitz.ipynb</h3>
+<ul>
+<li>Reinforcement learning is applied to the problem of optimal allocation</li>
+<li>The least squares policy iteration (LSPI) algorithm is applied to a Monte Carlo simulation of a stock’s price movements, constructing a basis over the state-action space using B-spline basis functions at each time period.</li>
+<li>The optimal Q-function is approximated with a dynamic programming approach, and this is shown to approach the exact solution</li>
+</ul>
+</body>
+</html>

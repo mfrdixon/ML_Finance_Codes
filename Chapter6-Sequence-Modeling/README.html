@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../resources/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="machine-learning-in-finance-from-theory-to-practice">Machine Learning in Finance: From Theory to Practice</h1>
+<h2 id="chapter-6-sequence-modeling">Chapter 6: Sequence Modeling</h2>
+<p>For instructions on how to set up the Python environment and run the notebooks please refer to <a href="../SETUP.html">SETUP.html</a> in the <em>ML_Finance_Codes</em> directory.</p>
+<p>This chapter contains the following notebooks:</p>
+<h3 id="ml_in_finance-pca-sp500.ipynb">ML_in_Finance-PCA-SP500.ipynb</h3>
+<ul>
+<li>The purpose of this notebook is to demonstrate the application of PCA, as a method of dimensionality reduction, to time series of adjusted close prices of SP500 listed assets.</li>
+<li>The analysis assumes that the prices are weakly covariance stationarity and uses the principal components to explain price variance.</li>
+<li>The components are also compared with the SP500 index price and index prices are regressed on the components to observe their importance.</li>
+</ul>
+<h3 id="ml_in_finance-arima-hft.ipynb">ML_in_Finance-ARIMA-HFT.ipynb</h3>
+<ul>
+<li>The purpose of this notebook is to demonstrate the application of ARIMA time series modeling to high frequency data.</li>
+<li>The model predicts changes in the VWAP (volume weighted average prices) based on historical observations of the VWMAP and an exogenous variable, the current Order Flow Imbalance (OFI).</li>
+<li>The notebook describes many of the steps in Chapter 6 on applying the Dickey-Fuller test to establish stationarity of the endogenous series, followed by use of the ACF and PACF to identify the ARIMA model order.</li>
+</ul>
+<p><br />
+</p>
+<p><br />
+</p>
+</body>
+</html>

@@ -26,7 +26,8 @@ This chapter contains the following notebooks:
 
 This notebook requires Junyan Xu's Python Heston Option Pricing Library
 
-* macOS and Linux users can install it by executing the following at a terminal:
+* macOS and Linux users can install it by executing the following command at a terminal:
+    * On macOS, if you are prompted to install the XCode command line tools, do so.
 
     `conda activate MLFenv && pip install git+https://github.com/junyanxu/Python-Heston-Option-Pricer`
 
@@ -44,10 +45,10 @@ This notebook requires Junyan Xu's Python Heston Option Pricing Library
 
         `!apt install libgsl-dev && pip install git+https://github.com/junyanxu/Python-Heston-Option-Pricer.git`
         
-    5. You can now import the modules and continue through the notebook.
+    5. You can now continue through the notebook.
 
 * The notebook demonstrates the fitting of a Gaussian Process regression model (GP) to option price data. In this notebook, European option prices are generated from the Heston stochastic volatility model.
-* It begins with the building of a GP Heston model, using the underyling and volatility as a two-dimensional input over a maturity time grid. The strike and other model parameters are assumed fixed. See Section 5 for further details.
+* It begins with the building of a GP Heston model, using the underlying and volatility as a two-dimensional input over a maturity time grid. The strike and other model parameters are assumed fixed. See Section 5 for further details.
 
 ### Example-7-MGP-BS-Pricing.ipynb
 * The fitting of a multi-response Gaussian Process Regression model (GP) to the prices of two options. In this notebook, the prices of a call and put are generated from the Black-Scholes model.  The notebook begins by building a multi-GP model, and then evaluates the error.

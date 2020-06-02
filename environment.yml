@@ -10,7 +10,6 @@ dependencies:
   - git=2.23.*
   - gsl=2.6
   - gpytorch=1.1.*
-  - bspline=0.1.1
   - imageio=2.8.*
   - ipykernel=5.1.*
   - ipython=7.13.*
@@ -35,6 +34,7 @@ dependencies:
   - tensorflow=2.0.*
   - tqdm=4.46
   - pip:
+    - bspline==0.1.1
     - pymc3==3.8
     - theano==1.0.4
     - tensorflow-probability==0.8.0

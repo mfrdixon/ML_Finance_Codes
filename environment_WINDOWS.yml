@@ -11,6 +11,7 @@ dependencies:
   - m2w64-toolchain
   - gsl=2.6
   - gpytorch=1.1.*
+  - bspline=0.1.1
   - imageio=2.8.*
   - ipykernel=5.1.*
   - ipython=7.13.*

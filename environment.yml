@@ -2,12 +2,10 @@ name: MLFenv
 channels:
   - conda-forge
   - gpytorch
-  - plotly
   - pytorch
   - defaults
 dependencies:
   - arviz=0.6.*
-  - chart-studio=1.1.*
   - gast=0.2.*
   - git=2.23.*
   - gsl=2.6
@@ -27,15 +25,15 @@ dependencies:
   - pandas=1.0.*
   - pip=20.0.*
   - plotly=4.6.*
-  - pymc3=3.8
-  - python=3.6.10
+  - python=3.6.*
   - pytorch=1.5.*
   - scikit-learn=0.22.*
   - scipy=1.4.*
   - seaborn=0.10.*
   - statsmodels=0.10.*
   - tensorflow=2.0.*
-  - theano=1.0.*
   - tqdm=4.46
   - pip:
+    - pymc3==3.8
+    - theano==1.0.4
     - tensorflow-probability==0.8.0

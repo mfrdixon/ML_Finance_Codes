@@ -13,7 +13,7 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="resources/style.css" />
+  <link rel="stylesheet" href="./resources/style.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -21,7 +21,8 @@
 <body>
 <h1 id="setup-guide">Setup Guide</h1>
 <p>This guide contains instructions for installing the software necessary to run the Jupyter notebooks accompanying <em>Machine Learning in Finance: From Theory to Practice</em></p>
-<p>If you have already installed Anaconda and set up the “MLFenv” virtual environment, skip to step 3 below for instructions on running the notebooks.</p>
+<p>If you have already installed Anaconda and set up the “MLFenv” virtual environment, skip to Step 3 below for instructions on running the notebooks.</p>
+<p>For help with running the notebooks on Google Colab, see the <em>Google_Colab_Setup.ipynb</em> notebook.</p>
 <h3 id="system-requirements">System Requirements</h3>
 <ul>
 <li>64-bit operating system</li>
@@ -29,7 +30,7 @@
 <li>25GB free disk space</li>
 </ul>
 <h2 id="install-anaconda">1. Install Anaconda</h2>
-<p>If you already have Anaconda installed, skip to step 2 below. First, copy and paste this link into your browser’s address bar and download the latest Python 3.x Anaconda installer for your operating system:</p>
+<p>If you already have Anaconda installed, skip to Step 2 below. First, copy and paste this link into your browser’s address bar and download the latest Python 3.x Anaconda installer for your operating system:</p>
 <pre><code>https://www.anaconda.com/products/individual</code></pre>
 <p><img src="./resources/anacondaDL.png" /></p>
 <p>Then go to the link below corresponding to your operating system and follow the instructions to install Anaconda:</p>
@@ -39,9 +40,9 @@
 <p><br />
 </p>
 <h2 id="set-up-the-virtual-environment">2. Set Up the Virtual Environment</h2>
-<p>We will create a virtual environment called “MLFenv” from the specifications in the file <em>environment.yml</em>, which is in the <em>ML_Finance_Codes</em> folder. When it is active, Python will have access to all of the packages used to run the notebooks.</p>
+<p>We will create a virtual environment called “MLFenv” from the specifications in the file <em>environment.yml</em> (macOS/Linux) or <em>environment_WINDOWS.yml</em> (Windows), which are in the <em>ML_Finance_Codes</em> folder. When it is active, Python will have access to all of the packages used to run the notebooks.</p>
 <ol type="1">
-<li>Open a window of your operating system’s file manager and navigate to the <em>ML_Finance_Codes</em> folder. You should be able to see the <em>environment.yml</em> file.</li>
+<li>Open a window of your operating system’s file manager and navigate to the <em>ML_Finance_Codes</em> folder. You should be able to see the <em>environment.yml</em> files.</li>
 </ol>
 <p><img src="resources/screen_d.png" /></p>
 <ol start="2" type="1">
@@ -53,12 +54,13 @@
 </ul></li>
 <li><p>Type the command below, <strong><em>followed by a space</em></strong>.</p>
 <pre><code> conda env create -f </code></pre></li>
-<li><p>Drag and drop the <em>environment.yml</em> file from the <em>ML_Finance_Codes</em> folder into the Terminal/Anaconda Prompt window. This will complete the command with the path to the <em>environment.yml</em> file.</p>
+<li><p>Drag and drop the <em>environment.yml</em> (macOS/Linux) or <em>environment_WINDOWS.yml</em> (Windows) file from the <em>ML_Finance_Codes</em> folder into the Terminal/Anaconda Prompt window. This will complete the command with the path to the <em>environment.yml</em> file.</p>
+<p><strong>Make sure you use the correct .yml file for your operating system</strong></p>
 <p>It should look like this (though the actual path will vary):</p></li>
 </ol>
 <p><img src="resources/env_create.png" /></p>
 <ol start="5" type="1">
-<li>Press Enter to run the command. It will take several minutes to complete. When it has finished, you will be able to follow the steps below to start the Jupyter notebook server and run the notebooks</li>
+<li>Press Enter to run the command. It will take several minutes to complete. When it has finished, you will be able to follow the steps in the next section to start the Jupyter notebook server and run the notebooks</li>
 </ol>
 <p><br />
 </p>

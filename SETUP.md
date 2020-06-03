@@ -1,7 +1,9 @@
 # Setup Guide
 This guide contains instructions for installing the software necessary to run the Jupyter notebooks accompanying *Machine Learning in Finance: From Theory to Practice*
 
-If you have already installed Anaconda and set up the "MLFenv" virtual environment, skip to step 3 below for instructions on running the notebooks.
+If you have already installed Anaconda and set up the "MLFenv" virtual environment, skip to Step 3 below for instructions on running the notebooks.
+
+For help with running the notebooks on Google Colab, see the *Google_Colab_Setup.ipynb* notebook. 
 
 ### System Requirements
 * 64-bit operating system
@@ -10,7 +12,7 @@ If you have already installed Anaconda and set up the "MLFenv" virtual environme
 
 ## 1. Install Anaconda
 
-If you already have Anaconda installed, skip to step 2 below. First, copy and paste this link into your browser's address bar and download the latest Python 3.x Anaconda installer for your operating system:
+If you already have Anaconda installed, skip to Step 2 below. First, copy and paste this link into your browser's address bar and download the latest Python 3.x Anaconda installer for your operating system:
 
     https://www.anaconda.com/products/individual
 
@@ -54,7 +56,7 @@ We will create a virtual environment called "MLFenv" from the specifications in 
 
 ![](resources/env_create.png)
 
-5. Press Enter to run the command. It will take several minutes to complete. When it has finished, you will be able to follow the steps below to start the Jupyter notebook server and run the notebooks
+5. Press Enter to run the command. It will take several minutes to complete. When it has finished, you will be able to follow the steps in the next section to start the Jupyter notebook server and run the notebooks
 
 \
 

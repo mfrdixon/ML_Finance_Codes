@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../resources/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="machine-learning-in-finance-from-theory-to-practice">Machine Learning in Finance: From Theory to Practice</h1>
+<h2 id="chapter-11-inverse-reinforcement-learning">Chapter 11: Inverse Reinforcement Learning</h2>
+<p>For instructions on how to set up the Python environment and run the notebooks please refer to <a href="../SETUP.html">SETUP.html</a> in the <em>ML_Finance_Codes</em> directory.</p>
+<p>This chapter contains the following notebooks:</p>
+<h3 id="ml_in_finance_irl_fcw.ipynb">ML_in_Finance_IRL_FCW.ipynb</h3>
+<ul>
+<li>In this notebook, three inverse reinforcement algorithms are applied to the Financial Cliff Walking (FCW) problem.</li>
+<li>These are Max Causal Entropy (Maxent), Inverse Reinforcement Learning from Failure (IRLF), and Trajectory-ranked Reward EXtrapolation (T-REX).<br />
+</li>
+<li>After training them on the FCW problem, and the state-action values learned by each algorithm are compared alongside the “ground truth” values.</li>
+<li>The reward distributions of the IRLF algorithm are compared for successful and unsuccessful trials.</li>
+</ul>
+<h3 id="ml_in_finance-girl-wealth-management.ipynb">ML_in_Finance-GIRL-Wealth-Management.ipynb</h3>
+<ul>
+<li>This notebook demonstrates the application of G-learning and GIRL for optimization of a defined contribution retirement plan. The notebook extends the G-learning notebook in Chapter 10 with an example of applying GIRL to infer the parameters of the G-learner used to generate the trajectories.</li>
+</ul>
+</body>
+</html>

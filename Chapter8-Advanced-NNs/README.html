@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../resources/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="machine-learning-in-finance-from-theory-to-practice">Machine Learning in Finance: From Theory to Practice</h1>
+<h2 id="chapter-8-advanced-neural-networks">Chapter 8: Advanced Neural Networks</h2>
+<p>For instructions on how to set up the Python environment and run the notebooks please refer to <a href="../SETUP.html">SETUP.html</a> in the <em>ML_Finance_Codes</em> directory.</p>
+<p>This chapter contains the following notebooks:</p>
+<h3 id="ml_in_finance-rnns-bitcoin.ipynb">ML_in_Finance-RNNs-Bitcoin.ipynb</h3>
+<ul>
+<li>This notebook shows an example of a recurrent neural network (RNN) for time series prediction. Please refer to Chapter 8, Sections 2-4 in the textbook</li>
+<li>To select an appropriate model architecture, the univariate time series <code>coinbase.csv</code> is analysed for stationarity and its partial auto-correlation function is estimated</li>
+<li>The time series is transformed into a set of input sequences and corresponding outputs for use with the RNN, and split into training and testing sets</li>
+<li>RNN, alphaRNN, alphatRNN, LSTM &amp; GRU models are trained on the time series</li>
+<li>An example of a time series cross-validation procedure is provided
+<ul>
+<li>This is disabled by default; the cross-validation process involves training the model many times, and can take many hours to complete.</li>
+</ul></li>
+</ul>
+<h3 id="ml_in_finance-rnns-hft.ipynb">ML_in_Finance-RNNs-HFT.ipynb</h3>
+<ul>
+<li>This notebook shows an example of a recurrent neural network (RNN) for time series prediction. Please refer to sections Chapter 8, Sections 2-4 in the textbook</li>
+<li>To select an appropriate model architecture, the univariate time series <code>HFT.csv</code> is analysed for stationarity and its partial auto-correlation function is estimated</li>
+<li>The time series is transformed into a set of input sequences and corresponding outputs for use with the RNN, and split into training and testing sets</li>
+<li>RNN, alphaRNN, alphatRNN, LSTM &amp; GRU models are trained on the time series</li>
+<li>An example of a time series cross-validation procedure is provided
+<ul>
+<li>This is disabled by default; the cross-validation process involves training the model many times, and takes many hours to complete</li>
+</ul></li>
+</ul>
+<h3 id="ml_in_finance-1d-cnns.ipynb">ML_in_Finance-1D-CNNs.ipynb</h3>
+<ul>
+<li>This notebook shows the process of creating a 1D convolutional neural network with Keras. Please refer to Chapter 8, Section 5 of the textbook</li>
+<li>An example timeseries is created and formatted for the training of the model</li>
+<li>Its ability to predict beyond the training data is demonstrated by comparing its predictions to the true values</li>
+</ul>
+<h3 id="ml_in_finance-2d-cnns.ipynb">ML_in_Finance-2D-CNNs.ipynb</h3>
+<ul>
+<li>This notebook shows the process of creating a 2D convolutional neural network. Please refer to Chapter 8, Section 5 of the textbook</li>
+<li>The MNIST dataset is loaded and transformed for input into the model, and split into a training and testing set</li>
+<li>The model’s out-of-sample classification performance is evaluated on the test set</li>
+</ul>
+<h3 id="ml_in_finance-autoencoders.ipynb">ML_in_Finance-Autoencoders.ipynb</h3>
+<ul>
+<li>This notebook compares linear dimensionality reduction using principal component analysis against that achieved in an autoencoder neural network. Please refer to Chapter 8, Section 6 in the textbook</li>
+<li>A review of PCA is provided</li>
+<li>An autoencoding neural network is created and trained on the <code>yield_curves.csv</code> data set</li>
+<li>The results of using the principal components and the weights learned by the autoencoder to transform the dataset are compared</li>
+</ul>
+</body>
+</html>

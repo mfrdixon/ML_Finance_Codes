@@ -1,0 +1,42 @@
+name: MLFenv
+channels:
+  - conda-forge
+  - gpytorch
+  - pytorch
+  - defaults
+dependencies:
+  - arviz=0.6.*
+  - gast=0.2.*
+  - git=2.23.*
+  - m2w64-toolchain
+  - gsl=2.6
+  - gpytorch=1.1.*
+  - imageio=2.8.*
+  - ipykernel=5.1.*
+  - ipython=7.13.*
+  - ipython_genutils=0.2.*
+  - ipywidgets=7.5.*
+  - libpython
+  - matplotlib-base=3.1.*
+  - mkl=2019.4
+  - mkl-service=2.3.*
+  - nbformat=5.0.*
+  - notebook=6.0.*
+  - numpy=1.18.*
+  - pandas=1.0.*
+  - pip=20.0.*
+  - plotly=4.6.*
+  - python=3.6.10
+  - pytorch=1.5.*
+  - scikit-learn=0.22.*
+  - scipy=1.4.*
+  - seaborn=0.10.*
+  - statsmodels=0.10.*
+  - tensorflow=2.0.*
+  - tqdm=4.46
+  - pip:
+    - bspline==0.1.1
+    - keras==2.3.1
+    - pymc3==3.8
+    - theano==1.0.4
+    - tensorflow-probability==0.8.0

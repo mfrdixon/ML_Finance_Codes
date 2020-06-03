@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../resources/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="machine-learning-in-finance-from-theory-to-practice">Machine Learning in Finance: From Theory to Practice</h1>
+<h2 id="chapter-3-gaussian-processes">Chapter 3: Gaussian Processes</h2>
+<p>For instructions on how to set up the Python environment and run the notebooks please refer to <a href="../SETUP.html">SETUP.html</a> in the <em>ML_Finance_Codes</em> directory.</p>
+<p>This chapter contains the following notebooks:</p>
+<h2 id="core-notebooks">Core Notebooks</h2>
+<h3 id="ml_in_finance_bayesian_linear_regression.ipynb">ML_in_Finance_Bayesian_Linear_Regression.ipynb</h3>
+<ul>
+<li>The purpose of this notebook is to illustrate Bayesian linear regression, as described in Sections 1 &amp; 2 in Chapter 3.</li>
+<li>It provides visualisations of Bayesian inference on the parameter distributions and of the resulting model and uncertainties in the input space.</li>
+</ul>
+<h3 id="example-1-gp-bs-pricing.ipynb">Example-1-GP-BS-Pricing.ipynb</h3>
+<ul>
+<li>The purpose of this notebook is to demonstrate the fitting of a Gaussian Process Regression model (GP) to option price data. In this notebook, European option prices are generated from the Black-Scholes model.</li>
+<li>The notebook begins by building a GP call model, then a GP put model, and finally a portfolio holding which is short a put and long two calls.</li>
+<li>Note that the training sample size is set to 5 in order to illustrate the uncertainty bands. See Section 5.0 for a description of using GP for pricing derivatives.</li>
+</ul>
+<h3 id="example-2-gp-bs-pricing.ipynb">Example-2-GP-BS-Pricing.ipynb</h3>
+<ul>
+<li>This notebook demonstrates the derivation of the Greeks in a Gaussian Process Regression model (GP), fitted to option price data. European option prices are generated from the Black-Scholes model.</li>
+<li>The notebook begins by building a GP call model, where the input is the underlying price. The delta is then derived and compared with the Black-Scholes (BS) delta.</li>
+<li>The exercise is then repeated using the volatility as the input instead of the underlying price. The vega of the GP is then derived and compared with the BS vega. See Section 5.1 for further details.</li>
+</ul>
+<h3 id="example-6-gp-heston.ipynb">Example-6-GP-Heston.ipynb</h3>
+<p>This notebook requires Junyan Xu’s Python Heston Option Pricing Library</p>
+<ul>
+<li><p>macOS and Linux users can install it by executing the following command at a terminal:</p>
+<ul>
+<li>On macOS, if you are prompted to install the XCode command line tools, do so.</li>
+</ul>
+<p><code>conda activate MLFenv &amp;&amp; pip install git+https://github.com/junyanxu/Python-Heston-Option-Pricer</code></p></li>
+<li><p>Windows users are recommended to run the notebook on Google Colab by following these steps:</p>
+<ol type="1">
+<li><p>Copy and paste this URL into your browser’s address bar and sign in with a Google account:</p>
+<pre><code> https://colab.research.google.com</code></pre></li>
+<li><p>Click on <strong>File&gt;Open notebook</strong> in the Colab menu, then select the Upload tab and choose the <em>Example-6-GP-Heston.ipynb</em> file.</p></li>
+<li><p>Then click the folder icon in the sidebar on the left to open the Files panel. Immediately click <strong>Upload</strong>, and upload <em>BlackScholes.py</em> from the <em>Chapter3-GPs</em> folder. It should appear alongside the “sample_data” folder in the Files panel.</p></li>
+<li><p>Now make a new code cell at the top of the file, paste the command below into it, and execute it to install PyHeston:</p>
+<p><code>!apt install libgsl-dev &amp;&amp; pip install git+https://github.com/junyanxu/Python-Heston-Option-Pricer.git</code></p></li>
+<li><p>You can now continue through the notebook.</p></li>
+</ol></li>
+<li><p>The notebook demonstrates the fitting of a Gaussian Process regression model (GP) to option price data. In this notebook, European option prices are generated from the Heston stochastic volatility model.</p></li>
+<li><p>It begins with the building of a GP Heston model, using the underlying and volatility as a two-dimensional input over a maturity time grid. The strike and other model parameters are assumed fixed. See Section 5 for further details.</p></li>
+</ul>
+<h3 id="example-7-mgp-bs-pricing.ipynb">Example-7-MGP-BS-Pricing.ipynb</h3>
+<ul>
+<li>The fitting of a multi-response Gaussian Process Regression model (GP) to the prices of two options. In this notebook, the prices of a call and put are generated from the Black-Scholes model. The notebook begins by building a multi-GP model, and then evaluates the error.</li>
+<li>Finally the notebook studies the posterior covariance term which is uniquely available in the multi-GP model. See Section 6 for further details.</li>
+</ul>
+<h2 id="extras">Extras</h2>
+<h3 id="example-3-mc-gpa-bs-cva.ipynb">Example-3-MC-GPA-BS-CVA.ipynb</h3>
+<ul>
+<li>The purpose of this notebook is to demonstrate the use of a Gaussian Process Regression model (GP) in CVA modeling of a derivative portfolio.</li>
+<li>European option prices are generated from the Black-Scholes model. The notebook illustrates CVA estimation for a portfolio which is short a put and long two calls.</li>
+<li>The GP model is combined with an Euler time-stepper to generate a GP MtM cube. The expected positive exposure of the portfolio is compared using exact derivative prices and GP derivative prices.</li>
+</ul>
+<h3 id="example-4-mc-gpa-bs-cva-var.ipynb">Example-4-MC-GPA-BS-CVA-VaR.ipynb</h3>
+<ul>
+<li>This notebook shows the use of a Gaussian Process Regression model (GP) in CVA Value-at-Risk modeling of a derivative portfolio.</li>
+<li>European option prices are generated from the Black-Scholes model. The notebook illustrates the CVA estimation for a portfolio which is short a put and long two calls.</li>
+<li>The GP model is combined with an Euler time-stepper to generate a GP MtM cube. The distribution of the one year CVA (with uncertainty quantification) is estimated based on priors for the default model parameters.</li>
+<li>Finally the difference of the one year CVA distribution and the CVA_0 is computed and the quantiles provided the 1 year CVA VaR estimates.</li>
+</ul>
+<h3 id="example-5-mc-gpa-irs-cva.ipynb">Example-5-MC-GPA-IRS-CVA.ipynb</h3>
+<ul>
+<li>This example demonstrates the application of GPs to CVA modeling on a counterparty portfolio of IRS contracts with 11 currencies and 10 FX processes.</li>
+<li>The notebook simulates the GP MtM cube of the portfolio, compares the Expected Positive Exposure when using a GP derivative pricing model versus a BS pricing model, and calculates the CVA_0.</li>
+</ul>
+</body>
+</html>

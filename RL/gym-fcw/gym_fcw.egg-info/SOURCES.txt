@@ -1,7 +1,0 @@
-README.md
-setup.py
-gym_fcw.egg-info/PKG-INFO
-gym_fcw.egg-info/SOURCES.txt
-gym_fcw.egg-info/dependency_links.txt
-gym_fcw.egg-info/requires.txt
-gym_fcw.egg-info/top_level.txt

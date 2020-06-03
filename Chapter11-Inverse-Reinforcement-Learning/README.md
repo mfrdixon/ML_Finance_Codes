@@ -13,6 +13,5 @@ This chapter contains the following notebooks:
 * After training them on the FCW problem, and the state-action values learned by each algorithm are compared alongside the "ground truth" values.
 * The reward distributions of the IRLF algorithm are compared for successful and unsuccessful trials.
 
-\
-
-\
+### ML_in_Finance-GIRL-Wealth-Management.ipynb
+* This notebook demonstrates the application of G-learning and GIRL for optimization of a defined contribution retirement plan. The notebook extends the G-learning notebook in Chapter 10 with an example of applying GIRL to infer the parameters of the G-learner used to generate the trajectories.
